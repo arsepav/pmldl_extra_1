@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  prepare_data:
+    cmd: python code/datasets/prepare_data.py
+    deps:
+    - path: code/datasets/prepare_data.py
+      hash: md5
+      md5: 52449395e0921b010112b353801d073a
+      size: 1683
+    - path: data/raw/car_prices.csv
+      hash: md5
+      md5: e600483fd4125216e9bfdc962f26565f
+      size: 88047552
+    outs:
+    - path: data/processed/test_data.csv
+      hash: md5
+      md5: d43f4a9079eb943319f042a36f0a6f6e
+      size: 8825805
+    - path: data/processed/train_data.csv
+      hash: md5
+      md5: b4d132cb209d681794a9c7f3b9f3c1d0
+      size: 35291324

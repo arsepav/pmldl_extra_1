@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0cc54eeded384c0992f641e5c82008e8/artifacts
+end_time: 1726750752843
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0cc54eeded384c0992f641e5c82008e8
+run_name: gaudy-chimp-227
+run_uuid: 0cc54eeded384c0992f641e5c82008e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726750715487
+status: 3
+tags: []
+user_id: root
