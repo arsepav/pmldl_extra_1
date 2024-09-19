@@ -1,0 +1,9 @@
+stages:
+  prepare_data:
+    cmd: python code/datasets/prepare_data.py
+    deps:
+    - code/datasets/prepare_data.py
+    - data/raw/car_prices.csv
+    outs:
+    - data/processed/test_data.csv
+    - data/processed/train_data.csv

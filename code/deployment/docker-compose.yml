@@ -1,0 +1,26 @@
+version: '3'
+services:
+  fastapi:
+    build: ./api
+    container_name: fastapi_extra_api
+    networks:
+      - app_network
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../../models/model.pkl:/app/model.pkl
+      - ../../models/scaler.pkl:/app/scaler.pkl
+
+  streamlit:
+    build: ./app
+    container_name: streamlit_extra_app
+    networks:
+      - app_network
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://fastapi_extra_api:8000/predict
+
+networks:
+  app_network:
+    driver: bridge
